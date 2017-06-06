@@ -1,0 +1,24 @@
+{
+    "contests":[
+        {
+            "id":1,
+            "categoryName":"Business/Company",
+            "contestName":"Cognitive Building Bricks"
+        },
+        {
+            "id":2,
+            "categoryName":"Magzine/Newsletter",
+            "contestName":"Educating people about success!"
+        },
+        {
+            "id":3,
+            "categoryName":"Software Company",
+            "contestName":"Free IT Solutions"
+        },
+        {
+            "id":4,
+            "categoryName":"Website",
+            "contestName":"Food analytics"
+        }
+    ]
+}

@@ -7,8 +7,16 @@ module.exports = {
     module:{
         loaders:[
             {
-            test: /\.js$/,
-            loader: 'babel-loader'
+                test: /\.js$/,
+                loader: 'babel-loader'
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
+            },
+            {
+                test: /\.css$/,
+                use: [ 'style-loader', 'css-loader' ]
             }
         ]
     }
