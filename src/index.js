@@ -5,8 +5,8 @@ import App from './components/App';
 import registerServiceWorker from './registerServiceWorker.js';
 import './index.css';
 
-import data from './testData';
 
 
-ReactDOM.render(<App contests={data.contests} />, document.getElementById('root'));
+
+ReactDOM.render(<App  />, document.getElementById('root'));
 registerServiceWorker();

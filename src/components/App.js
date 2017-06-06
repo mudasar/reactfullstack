@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 import Clock from './Clock';
 import ContestPreview from './ContestPreview';
-
+import axios from 'axios';
 
 class App extends React.Component {
 
@@ -13,9 +13,23 @@ class App extends React.Component {
     }
 
     state = {
-        pageHeader: 'Naming Contests'
+        pageHeader: 'Naming Contests',
+        contests: []
 
     };
+
+    
+    componentWillMount () {
+        axios.get('/api/contests').then((resp => {
+            console.log(resp);
+            this.setState({
+                contests: resp.data.contests
+            });
+
+        })).catch(console.error);
+        
+    }
+    
 
     render(){
         return(
@@ -44,7 +58,7 @@ class App extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col">
-                        {this.props.contests.map(contest => <ContestPreview key={contest.id} contest={contest} />)}
+                        {this.state.contests.map(contest => <ContestPreview key={contest.id} contest={contest} />)}
                         <br />
                     </div>
                 </div>
